@@ -1,0 +1,41 @@
+.Card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+
+}
+
+.book-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-img {
+  padding: 10px;
+  /* background: #999; */
+  min-width: 200px;
+  height: auto;
+}
+
+.book-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.book-subtext {
+
+}
+
+.book-desc {
+
+}

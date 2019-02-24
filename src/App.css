@@ -1,17 +1,20 @@
 @import "./comps/nav/Nav.css";
 @import './comps/searchbox/SearchBox.css';
+@import './comps/card/Card.css';
+
 
 *, *::after, *::before {
   box-sizing: border-box;
 }
 
 .App {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 900px;
 }
 
 .App-header {
-  padding: 20px;
+  padding: 0 0 20px;
   display: flex;
   justify-content: space-between;
 }

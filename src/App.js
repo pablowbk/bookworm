@@ -3,6 +3,7 @@ import './App.css';
 import Nav from './comps/nav/Nav';
 import SearchBox from './comps/searchbox/SearchBox';
 import Default from './comps/default/Default';
+import Card from './comps/card/Card';
 
 class App extends Component {
   constructor(props) {
@@ -45,6 +46,9 @@ class App extends Component {
         />
 
         <Default />
+        <Card />
+        <Card />
+        <Card />
       </div>
     );
   }
