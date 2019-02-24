@@ -1,25 +1,50 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from './comps/nav/Nav';
+import SearchBox from './comps/searchbox/SearchBox';
+import Default from './comps/default/Default';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      query: ''
+    }
+
+    this.handleSearchChange = this.handleSearchChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+
+  }
+
+// HANDLE SEARCH INPUT VALUE
+  handleSearchChange(event) {
+    this.setState({ query: event.target.value });
+  }
+
+// HANDLE FORM SUBMIT EVENT
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log('searchinggg');
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h1>BookWorm</h1>
+          <Nav />
         </header>
+
+        <SearchBox
+          onSearchChange={this.handleSearchChange}
+          onBtnSubmit={this.handleSubmit}
+          query={this.state.query}
+        />
+
+        <Default />
       </div>
     );
   }

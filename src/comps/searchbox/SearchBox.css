@@ -1,0 +1,50 @@
+/* SEARCHBOX COMP */
+.SearchBox {
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  box-shadow: 0 0px 20px -5px rgba(7, 111, 170,0.5);
+}
+
+.SearchBox input {
+  border: none;
+  padding: 10px 20px;
+  flex: 1;
+}
+
+
+.search-btn {
+  /* position: absolute; */
+  /* top: 50%;
+  right: 0; */
+  /* transform: translateY(-50%); */
+  background: none;
+  border: none;
+  color: rgb(7, 111, 170);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.SearchBox .search-btn:hover {
+  /* border: 1px solid rgba(7, 111, 170,0.5); */
+  box-shadow: 0 5px 10px -5px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.SearchBox .search-btn:hover #lupita-svg {
+  cursor: pointer;
+  fill: #fff;
+}
+
+.SearchBox #lupita-svg {
+  padding: 10px;
+  height: 50px;
+  width: 80px;
+  background-color: rgba(7, 111, 170,1);
+  fill: #ddd;
+  transition: all 200ms ease;
+  pointer-events: none;
+}
