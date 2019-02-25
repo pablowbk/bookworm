@@ -8,9 +8,10 @@ const SearchBox = ({ query, onSearchChange, onBtnSubmit }) => {
         className="input"
         type="search"
         name="searchfield"
-        placeholder="start typing..."
+        placeholder="title, author..."
         autoFocus={true}
         onChange={onSearchChange}
+        value={query}
       />
       <button type='submit' className='search-btn' name="search-btn">
         <svg version="1.1" id="lupita-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 500 500"

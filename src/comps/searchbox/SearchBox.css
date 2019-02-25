@@ -1,7 +1,7 @@
 /* SEARCHBOX COMP */
 .SearchBox {
   padding: 0;
-  margin: 0 20px;
+  margin: 0 auto;
   position: relative;
   display: flex;
   box-shadow: 0 0px 20px -5px rgba(7, 111, 170,0.5);
@@ -12,6 +12,10 @@
   padding: 10px 20px;
   flex: 1;
 
+}
+
+.SearchBox input[placeholder] {
+  font-size: inherit;
 }
 
 
@@ -38,13 +42,14 @@
 .SearchBox .search-btn:hover #lupita-svg {
   cursor: pointer;
   fill: #fff;
+  background-color: rgba(159, 58, 58, 1);
 }
 
 .SearchBox #lupita-svg {
   padding: 10px;
   height: 50px;
   width: 80px;
-  background-color: rgba(7, 111, 170,1);
+  background-color: rgba(159, 58, 58, .9);
   fill: #ddd;
   transition: all 200ms ease;
   pointer-events: none;

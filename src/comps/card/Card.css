@@ -2,6 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 10px 10px -10px rgba(159, 58, 58, 1);
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .book-container {
@@ -16,13 +19,15 @@
 .book-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .book-img {
   padding: 10px;
   /* background: #999; */
   min-width: 200px;
-  height: auto;
+  height: 100%;
+  align-self: flex-start;
 }
 
 .book-more {
@@ -30,6 +35,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding: 0 10px;
 }
 
 .book-subtext {

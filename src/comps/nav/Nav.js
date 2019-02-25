@@ -3,11 +3,11 @@ import React from 'react';
 const Nav = () => {
   return (
     <nav className="Nav">
-      <ul>
+      {/* <ul>
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
-      </ul>
+      </ul> */}
     </nav>
   );
 }
