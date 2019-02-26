@@ -1,6 +1,5 @@
 .Card {
   display: flex;
-  justify-content: center;
   align-items: center;
   box-shadow: 0 10px 10px -10px rgba(159, 58, 58, 1);
   border-radius: 10px;
@@ -25,8 +24,6 @@
 .book-img {
   padding: 10px;
   /* background: #999; */
-  min-width: 200px;
-  height: 100%;
   align-self: flex-start;
 }
 
@@ -46,7 +43,7 @@
   flex: 1;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .book-info {
     display: block;
   }

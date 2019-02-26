@@ -1,6 +1,7 @@
 @import "./comps/nav/Nav.css";
 @import './comps/searchbox/SearchBox.css';
 @import './comps/card/Card.css';
+@import './comps/card/na.css';
 
 
 *, *::after, *::before {
@@ -25,7 +26,16 @@
   border-bottom: 2px solid rgba(159, 58, 58, 1);
 }
 
-
 .Default {
   text-align: center;
+  overflow: hidden;
+}
+
+.temptext {
+  margin-top: 1em;
+  transition: all 300ms ease-in-out;
+}
+
+.top {
+  margin-top: -1000px;
 }

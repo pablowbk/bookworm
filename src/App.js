@@ -3,10 +3,11 @@ import './App.css';
 import Nav from './comps/nav/Nav';
 import SearchBox from './comps/searchbox/SearchBox';
 import Default from './comps/default/Default';
-import CardsList from './comps/cardslist/CardsList';
+import Card from './comps/card/Card';
+// import CardsList from './comps/cardslist/CardsList';
 
 
-const api_key = process.env.GBOOKS_API_KEY;
+// const api_key = process.env.GBOOKS_API_KEY;
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +16,11 @@ class App extends Component {
       query: '',
       api_url: 'https://www.googleapis.com/books/v1/volumes?q=',
       isLoaded: false,
-      results: ''
+      results: {
+        items: [],
+        kind: '',
+        totalItems: 0
+      }
     }
 
     this.handleSearchChange = this.handleSearchChange.bind(this);
@@ -39,8 +44,7 @@ class App extends Component {
     const parsedQuery = query.replace(regex, "+");
 
     if (event.target.elements.searchfield.value.length > 0) {
-      console.log(`${api_url}${parsedQuery}`);
-      fetch(`${api_url}${query}`)
+      fetch(`${api_url}${parsedQuery}&maxResults=25`)
         .then(resp => resp.json())
         .then(json_data => this.setState({results: json_data}))
     }
@@ -65,7 +69,7 @@ class App extends Component {
 
         {this.state.query.length <= 0 ? <Default /> : null}
 
-        <CardsList data={this.state.results}/>
+        {this.state.results.items ? <Card data={this.state.results}/> : null}
 
         {/* <footer>
           <p></p>
