@@ -3,9 +3,10 @@ import './App.css';
 import Nav from './comps/nav/Nav';
 import SearchBox from './comps/searchbox/SearchBox';
 import Default from './comps/default/Default';
-import Card from './comps/card/Card';
+import CardsList from './comps/cardslist/CardsList';
 
-const api_key = 'AIzaSyADj4rAkJK8m-4Hd283osRAaA9vJyqXlTM';
+
+const api_key = process.env.GBOOKS_API_KEY;
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class App extends Component {
     this.state = {
       query: '',
       api_url: 'https://www.googleapis.com/books/v1/volumes?q=',
-      isLoaded: false
+      isLoaded: false,
+      results: ''
     }
 
     this.handleSearchChange = this.handleSearchChange.bind(this);
@@ -40,7 +42,7 @@ class App extends Component {
       console.log(`${api_url}${parsedQuery}`);
       fetch(`${api_url}${query}`)
         .then(resp => resp.json())
-        .then(json_data => console.table(json_data))
+        .then(json_data => this.setState({results: json_data}))
     }
   }
 
@@ -63,9 +65,7 @@ class App extends Component {
 
         {this.state.query.length <= 0 ? <Default /> : null}
 
-        <Card />
-        <Card />
-        <Card />
+        <CardsList data={this.state.results}/>
 
         {/* <footer>
           <p></p>

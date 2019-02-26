@@ -4,7 +4,7 @@
   align-items: center;
   box-shadow: 0 10px 10px -10px rgba(159, 58, 58, 1);
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .book-container {
@@ -13,7 +13,7 @@
 }
 
 .book-title {
-
+  margin: 10px;
 }
 
 .book-info {
@@ -33,15 +33,28 @@
 .book-more {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0 10px;
+  justify-content: space-between;
+  padding: 10px;
+  align-self: stretch;
 }
 
 .book-subtext {
-
+  margin: 0;
 }
 
 .book-desc {
+  flex: 1;
+}
 
+@media (max-width: 500px) {
+  .book-info {
+    display: block;
+  }
+
+  .book-img {
+    max-width: 100%;
+  }
+
+  .book-more {
+  }
 }

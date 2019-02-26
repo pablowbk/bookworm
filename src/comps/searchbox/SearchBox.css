@@ -4,7 +4,7 @@
   margin: 0 auto;
   position: relative;
   display: flex;
-  box-shadow: 0 0px 20px -5px rgba(7, 111, 170,0.5);
+  box-shadow: 0 0px 20px -5px rgba(159, 58, 58, .7);
 }
 
 .SearchBox input {
@@ -53,4 +53,14 @@
   fill: #ddd;
   transition: all 200ms ease;
   pointer-events: none;
+}
+
+@media  (max-width: 500px) {
+  .SearchBox input {
+    padding: 10px;
+  }
+  .SearchBox #lupita-svg {
+    height: 48px;
+    width: auto;
+  }
 }
