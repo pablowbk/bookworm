@@ -14,7 +14,7 @@ class App extends Component {
     super(props)
     this.state = {
       query: '',
-      api_url: 'https://www.googleapis.com/books/v1/volumes?q=',
+      api_url: 'https://www.googleapis.com/books/v1/volumes?libraryRestrict=no-restrict&orderBy=relevance&printType=books&q=',
       isLoaded: false,
       results: {
         items: [],
@@ -67,8 +67,16 @@ class App extends Component {
           query={this.state.query}
         />
 
+        {/* check for input */}
         {this.state.query.length <= 0 ? <Default /> : null}
 
+        {/* check for valid input results */}
+        {this.state.results.totalItems === 0 && !this.state.results.items
+          ? <h3 className="noresults">No matches found. Please try another search term =(</h3>
+          : null
+        }
+
+        {/* render cards based on input results */}
         {this.state.results.items ? <Card data={this.state.results}/> : null}
 
         {/* <footer>

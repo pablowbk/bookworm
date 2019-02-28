@@ -8,7 +8,7 @@ const SearchBox = ({ query, onSearchChange, onBtnSubmit }) => {
         className="input"
         type="search"
         name="searchfield"
-        placeholder="title, author..."
+        placeholder="Book Title, Author..."
         autoFocus={true}
         onChange={onSearchChange}
         value={query}

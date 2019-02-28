@@ -34,8 +34,13 @@
 .temptext {
   margin-top: 1em;
   transition: all 300ms ease-in-out;
+  color: rgba(159, 58, 58, 1);
 }
 
 .top {
   margin-top: -1000px;
+}
+
+.noresults {
+  color: rgba(159, 58, 58, 1);
 }
