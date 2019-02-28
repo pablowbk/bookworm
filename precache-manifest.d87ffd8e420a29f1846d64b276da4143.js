@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/bookworm/static/js/runtime~main.161ee0e7.js"
   },
   {
-    "revision": "88eb181557573c73a1dc",
-    "url": "/bookworm/static/js/main.88eb1815.chunk.js"
+    "revision": "71143e648379e7d37655",
+    "url": "/bookworm/static/js/main.71143e64.chunk.js"
   },
   {
     "revision": "217e7796f8d1d533ff87",
     "url": "/bookworm/static/js/2.217e7796.chunk.js"
   },
   {
-    "revision": "88eb181557573c73a1dc",
-    "url": "/bookworm/static/css/main.f3d80908.chunk.css"
+    "revision": "71143e648379e7d37655",
+    "url": "/bookworm/static/css/main.1c5e94bc.chunk.css"
   },
   {
-    "revision": "31f6aaa1db919c27186745c345e68990",
+    "revision": "a3f29eef5bc0b1ab2711fe136a881dc9",
     "url": "/bookworm/index.html"
   }
 ];
