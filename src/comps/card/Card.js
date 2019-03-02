@@ -5,33 +5,48 @@ const Card = ({data}) => {
   return (
     data.items.map((item, i) => {
       return (
-        <div className="Card" key={item.id}>
-          <div className="book-container">
-            <h3 className="book-title">
-              {
-              item.volumeInfo.title
-              ? item.volumeInfo.title
-              : `Sin Título`
-              }
-            </h3>
-            <div className="book-info">
-              { item.volumeInfo.imageLinks
-                ? <img className="book-img" src={item.volumeInfo.imageLinks.thumbnail} alt="book cover"/>
-                : <Na />
-              }
-              <div className="book-more">
-                <h4 className="book-subtext">
-                  {
-                  item.volumeInfo.subtitle
-                  }
-                </h4>
-                <div className="book-desc">
-                  { item.volumeInfo.description ? item.volumeInfo.description : `Sin Descripción` }
+        item.volumeInfo.imageLinks && item.searchInfo
+          ?
+          <div className="Card" key={item.id}>
+            <div className="book-container">
+              <h3 className="book-title">
+                {
+                item.volumeInfo.title
+                ? item.volumeInfo.title
+                : `Sin Título`
+                }
+              </h3>
+              <div className="book-info">
+                { item.volumeInfo.imageLinks
+                  ? <img className="book-img" src={item.volumeInfo.imageLinks.thumbnail} alt="book cover"/>
+                  : <Na />
+                }
+                <div className="book-more">
+                  <div className="book-desc">
+                    {item.volumeInfo.categories
+                      ? item.volumeInfo.categories.map( (categorie, i) => {
+                        return (
+                          <div className="categorie" key={i}>{categorie}</div>
+                        )})
+                        : <div className="categorie">Unclassified</div>
+                      }
+                      {/* { item.searchInfo ? item.searchInfo.textSnippet : `Sin Descripción` } */}
+                  </div>
+                  <h4 className="book-subtext">
+                    by {
+                      item.volumeInfo.authors
+                    }
+                  </h4>
+                  <div className="expanded">
+                    <div name="button" className="btn">
+                      +
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+          : null
       )
     })
     // <div className="Card">

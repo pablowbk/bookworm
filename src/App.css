@@ -11,7 +11,7 @@
 .App {
   margin: 0 auto;
   padding: 20px;
-  max-width: 900px;
+  max-width: 1200px;
 }
 
 .App-header {
@@ -43,4 +43,5 @@
 
 .noresults {
   color: rgba(159, 58, 58, 1);
+  text-align: center;
 }

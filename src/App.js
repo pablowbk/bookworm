@@ -16,6 +16,7 @@ class App extends Component {
       query: '',
       api_url: 'https://www.googleapis.com/books/v1/volumes?libraryRestrict=no-restrict&orderBy=relevance&printType=books&q=',
       isLoaded: false,
+      isSearching: false,
       results: {
         items: [],
         kind: '',
@@ -61,6 +62,10 @@ class App extends Component {
           <Nav />
         </header>
 
+
+
+
+
         <SearchBox
           onSearchChange={this.handleSearchChange}
           onBtnSubmit={this.handleSubmit}
@@ -77,7 +82,9 @@ class App extends Component {
         }
 
         {/* render cards based on input results */}
-        {this.state.results.items ? <Card data={this.state.results}/> : null}
+        <div className="CardsList">
+          {this.state.results.items ? <Card data={this.state.results}/> : null}
+        </div>
 
         {/* <footer>
           <p></p>
