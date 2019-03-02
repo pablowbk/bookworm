@@ -18,7 +18,9 @@ const Card = ({data}) => {
               </h3>
               <div className="book-info">
                 { item.volumeInfo.imageLinks
-                  ? <img className="book-img" src={item.volumeInfo.imageLinks.thumbnail} alt="book cover"/>
+                  ? <a className="link" href={item.volumeInfo.previewLink} target="_blank">
+                    <img className="book-img" src={item.volumeInfo.imageLinks.thumbnail} alt="book cover"/>
+                    </a>
                   : <Na />
                 }
                 <div className="book-more">
@@ -41,9 +43,9 @@ const Card = ({data}) => {
                     }
                       {/* { item.searchInfo ? item.searchInfo.textSnippet : `Sin Descripción` } */}
                     <div name="button" className="btn">
-                      +
+                      <a className="link" href={item.volumeInfo.previewLink} target="_blank">+</a>
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
