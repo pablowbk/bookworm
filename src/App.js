@@ -45,7 +45,7 @@ class App extends Component {
     const parsedQuery = query.replace(regex, "+");
 
     if (event.target.elements.searchfield.value.length > 0) {
-      fetch(`${api_url}${parsedQuery}&maxResults=25`)
+      fetch(`${api_url}${parsedQuery}&maxResults=36`)
         .then(resp => resp.json())
         .then(json_data => this.setState({results: json_data}))
     }

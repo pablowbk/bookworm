@@ -22,22 +22,26 @@ const Card = ({data}) => {
                   : <Na />
                 }
                 <div className="book-more">
-                  <div className="book-desc">
-                    {item.volumeInfo.categories
-                      ? item.volumeInfo.categories.map( (categorie, i) => {
-                        return (
-                          <div className="categorie" key={i}>{categorie}</div>
-                        )})
-                        : <div className="categorie">Unclassified</div>
-                      }
-                      {/* { item.searchInfo ? item.searchInfo.textSnippet : `Sin Descripción` } */}
+                  <div className="book-subtext">
+                    by  <span>{
+                      item.volumeInfo.authors ? item.volumeInfo.authors.join(', ') : 'Undeclared'
+                    }</span>
                   </div>
-                  <h4 className="book-subtext">
-                    by {
-                      item.volumeInfo.authors
-                    }
-                  </h4>
+                  <div className="book-subtext">
+                    Publisher: <span>{ item.volumeInfo.publisher ? item.volumeInfo.publisher : 'Undeclared'}</span>
+                  </div>
+
                   <div className="expanded">
+                    <div className="book-desc">
+                      {item.volumeInfo.categories
+                        ? item.volumeInfo.categories.map( (categorie, i) => {
+                          return (
+                            <div className="categorie" key={i}>{categorie}</div>
+                          )})
+                          : <div className="categorie">Unclassified</div>
+                        }
+                        {/* { item.searchInfo ? item.searchInfo.textSnippet : `Sin Descripción` } */}
+                      </div>
                     <div name="button" className="btn">
                       +
                     </div>

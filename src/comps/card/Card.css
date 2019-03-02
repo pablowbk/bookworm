@@ -1,12 +1,14 @@
 .CardsList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300x, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin: 0 -100px;
+  grid-gap: 20px;
 }
 
 
 .Card {
   position: relative;
-  max-width: 400px;
+
   display: flex;
   align-items: center;
   margin-top: 30px;
@@ -80,8 +82,12 @@
   padding: 10px;
 }
 
-.book-desc {
+.book-subtext span {
+  font-weight: bold;
+}
 
+.book-desc {
+  padding: 10px;
 }
 
 .categorie {
@@ -90,11 +96,14 @@
   font-size: .9em;
   background-color: rgba(159, 58, 58, 1);
   color: #fff;
+  text-align: center;
 }
 
 .expanded {
+  align-self: stretch;
   display: flex;
-  align-self: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn {
@@ -124,10 +133,16 @@
   }
 
   .book-desc {
-    align-self: flex-start;
+    align-self: center;
   }
 
   .categorie {
 
+  }
+}
+
+@media (max-width: 1400px) {
+  .CardsList {
+    margin: 0;
   }
 }
