@@ -8,7 +8,6 @@
 
 .Card {
   position: relative;
-
   display: flex;
   align-items: center;
   margin-top: 30px;
@@ -16,7 +15,7 @@
   border-left: 1em solid rgba(159, 58, 58, 1);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  transition: all 400ms ease;
+  transition: all 300ms ease;
   box-shadow:
   3px 3px 0px 0px rgba(255, 255, 255, 1),
   5px 5px 0px 0px rgba(159, 58, 58, .7),
@@ -27,6 +26,8 @@
 }
 
 .Card:hover {
+  /* background-color: rgba(159, 58, 58, .1); */
+
 }
 
 
@@ -46,10 +47,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
 }
 
 .book-title {
   margin: 10px;
+  padding: 10px;
   text-align: center;
   color: rgba(159, 58, 58, 1);
 }
@@ -90,20 +93,22 @@
   padding: 10px;
 }
 
-.categorie {
-  display: inline-block;
-  padding: 5px 10px;
-  font-size: .9em;
-  background-color: rgba(159, 58, 58, 1);
-  color: #fff;
-  text-align: center;
-}
 
 .expanded {
   align-self: stretch;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.category {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: .9em;
+  background-color: rgba(159, 58, 58, 1);
+  color: #fff;
+  text-align: center;
+  margin: 10px;
 }
 
 .btn {
@@ -133,7 +138,6 @@
   }
 
   .book-desc {
-    align-self: center;
   }
 
   .categorie {

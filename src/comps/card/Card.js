@@ -32,19 +32,18 @@ const Card = ({data}) => {
                   </div>
 
                   <div className="expanded">
-                    <div className="book-desc">
-                      {item.volumeInfo.categories
-                        ? item.volumeInfo.categories.map( (categorie, i) => {
-                          return (
-                            <div className="categorie" key={i}>{categorie}</div>
-                          )})
-                          : <div className="categorie">Unclassified</div>
-                        }
-                        {/* { item.searchInfo ? item.searchInfo.textSnippet : `Sin Descripción` } */}
-                      </div>
+                    { item.volumeInfo.categories
+                      ? item.volumeInfo.categories.map( (category, i) => {
+                        return (
+                          <div className="category" key={i}>{category}</div>
+                        )})
+                        : <div className="category">Unclassified</div>
+                    }
+                      {/* { item.searchInfo ? item.searchInfo.textSnippet : `Sin Descripción` } */}
                     <div name="button" className="btn">
                       +
                     </div>
+                    
                   </div>
                 </div>
               </div>
