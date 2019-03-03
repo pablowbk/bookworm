@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/bookworm/precache-manifest.e87bb02e70a5c31cead5aa298752beb6.js"
+  "/bookworm/precache-manifest.001f21a04e6612a7b41203d3d49bae0c.js"
 );
 
 workbox.clientsClaim();
