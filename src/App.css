@@ -2,6 +2,7 @@
 @import './comps/searchbox/SearchBox.css';
 @import './comps/card/Card.css';
 @import './comps/card/na.css';
+@import './comps/loader/Loader.css';
 
 
 *, *::after, *::before {
@@ -44,4 +45,9 @@
 .noresults {
   color: rgba(159, 58, 58, 1);
   text-align: center;
+}
+
+.Searching {
+  text-align: center;
+  font-size: 1.5em;
 }

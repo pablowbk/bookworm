@@ -4,6 +4,7 @@ import Nav from './comps/nav/Nav';
 import SearchBox from './comps/searchbox/SearchBox';
 import Default from './comps/default/Default';
 import Card from './comps/card/Card';
+import Loader from './comps/loader/Loader';
 // import CardsList from './comps/cardslist/CardsList';
 
 
@@ -40,14 +41,15 @@ class App extends Component {
 // HANDLE FORM SUBMIT EVENT
   handleSubmit(event) {
     event.preventDefault();
+    this.setState(prevState => ({isSearching: !prevState.isSearching}));
     const { api_url, query } = this.state;
     const regex = /\s/g;
     const parsedQuery = query.replace(regex, "+");
 
     if (event.target.elements.searchfield.value.length > 0) {
-      fetch(`${api_url}${parsedQuery}&maxResults=36`)
+      fetch(`${api_url}${parsedQuery}&maxResults=40`)
         .then(resp => resp.json())
-        .then(json_data => this.setState({results: json_data}))
+        .then(json_data => this.setState( prevState => ({results: json_data, isSearching: !prevState.isSearching})))
     }
   }
 
@@ -61,10 +63,6 @@ class App extends Component {
           <h1>BookWorm</h1>
           <Nav />
         </header>
-
-
-
-
 
         <SearchBox
           onSearchChange={this.handleSearchChange}
@@ -80,6 +78,10 @@ class App extends Component {
           ? <h3 className="noresults">No matches found. Please try another search term =(</h3>
           : null
         }
+
+        <Loader isSearching={this.state.isSearching}/>
+
+        { this.state.isSearching ? <h1 className="Searching">Searching...</h1> : null }
 
         {/* render cards based on input results */}
         <div className="CardsList">

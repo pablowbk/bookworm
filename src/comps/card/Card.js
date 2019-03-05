@@ -1,7 +1,7 @@
 import React from 'react';
 import Na from './na';
 
-const Card = ({data}) => {
+const Card = ({ data }) => {
   return (
     data.items.map((item, i) => {
       return (
@@ -18,7 +18,7 @@ const Card = ({data}) => {
               </h3>
               <div className="book-info">
                 { item.volumeInfo.imageLinks
-                  ? <a className="link" href={item.volumeInfo.previewLink} target="_blank">
+                  ? <a className="link" href={item.volumeInfo.previewLink} rel="noopener noreferrer" target="_blank">
                     <img className="book-img" src={item.volumeInfo.imageLinks.thumbnail} alt="book cover"/>
                     </a>
                   : <Na />
@@ -32,6 +32,12 @@ const Card = ({data}) => {
                   <div className="book-subtext">
                     Publisher: <span>{ item.volumeInfo.publisher ? item.volumeInfo.publisher : 'Undeclared'}</span>
                   </div>
+                  <div className="book-subtext">
+                    Published: <span>{ item.volumeInfo.publishedDate ? item.volumeInfo.publishedDate : 'Unknown'}</span>
+                  </div>
+                  <div className="book-subtext">
+                    Rating: <span>{ item.volumeInfo.averageRating ? item.volumeInfo.averageRating : '-'}</span>
+                  </div>
 
                   <div className="expanded">
                     { item.volumeInfo.categories
@@ -43,7 +49,7 @@ const Card = ({data}) => {
                     }
                       {/* { item.searchInfo ? item.searchInfo.textSnippet : `Sin Descripción` } */}
                     <div name="button" className="btn">
-                      <a className="link" href={item.volumeInfo.previewLink} target="_blank">+</a>
+                      <a className="link" href={item.volumeInfo.previewLink} rel="noopener noreferrer" target="_blank">+</a>
                     </div>
 
                   </div>
