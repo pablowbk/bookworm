@@ -54,40 +54,37 @@
 }
 
 .one {
+  height: 72px;
   width: 20px;
 }
 
-.one::after {
-  content: "";
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  border: 2px solid var(--main-color);
+.one::before {
+  top: 30%;
+  border: 6px solid var(--main-color);
+}
 
+.one::after {
+  border: none;
 }
 
 .two {
-  height: 70px;
-}
-.two::before {
-  border: none;
+  height: 65px;
 }
 .two::after {
-  border: 6px solid var(--main-color);
+  border: 2px solid var(--main-color);
 }
 
 .three {
   height: 72px;
-  width: 22px;
+  width: 20px;
 }
 .three::before {
-  top: 20%
+  top: 20%;
+  border: 6px solid var(--main-color);
 }
 .three::after {
-  bottom: 65%;
-  border: 2px solid var(--main-color);
+  bottom: 5%;
+  /* border: 2px solid var(--main-color); */
 }
 
 .four {
@@ -100,6 +97,8 @@
 
 .five {
   width: 20px;
+  margin-left: 3px;
+  transform: rotateZ(-4deg);
 }
 .five::before {
   top:50%;

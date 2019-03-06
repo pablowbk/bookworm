@@ -83,7 +83,6 @@
   max-width: 100%;
   align-self: flex-start;
   box-shadow: 2px 2px 5px 0 rgba(0,0,0,.3);
-  /* transform: rotateZ(-3deg); */
   transform: perspective(80px) rotateY(-3deg);
   border-radius: 5px;
   transition: all 100ms ease-in-out;
