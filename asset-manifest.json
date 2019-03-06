@@ -1,13 +1,13 @@
 {
-  "main.css": "/bookworm/static/css/main.0ad15245.chunk.css",
-  "main.js": "/bookworm/static/js/main.f04e83ac.chunk.js",
-  "main.js.map": "/bookworm/static/js/main.f04e83ac.chunk.js.map",
+  "main.css": "/bookworm/static/css/main.8377365c.chunk.css",
+  "main.js": "/bookworm/static/js/main.3a914320.chunk.js",
+  "main.js.map": "/bookworm/static/js/main.3a914320.chunk.js.map",
   "runtime~main.js": "/bookworm/static/js/runtime~main.161ee0e7.js",
   "runtime~main.js.map": "/bookworm/static/js/runtime~main.161ee0e7.js.map",
   "static/js/2.015ea03c.chunk.js": "/bookworm/static/js/2.015ea03c.chunk.js",
   "static/js/2.015ea03c.chunk.js.map": "/bookworm/static/js/2.015ea03c.chunk.js.map",
   "index.html": "/bookworm/index.html",
-  "precache-manifest.bcc681d9e9befd065ca6ae6758631a5d.js": "/bookworm/precache-manifest.bcc681d9e9befd065ca6ae6758631a5d.js",
+  "precache-manifest.bd375e0e2281080aabd9331c790713d5.js": "/bookworm/precache-manifest.bd375e0e2281080aabd9331c790713d5.js",
   "service-worker.js": "/bookworm/service-worker.js",
-  "static/css/main.0ad15245.chunk.css.map": "/bookworm/static/css/main.0ad15245.chunk.css.map"
+  "static/css/main.8377365c.chunk.css.map": "/bookworm/static/css/main.8377365c.chunk.css.map"
 }
