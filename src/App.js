@@ -41,7 +41,11 @@ class App extends Component {
 // HANDLE FORM SUBMIT EVENT
   handleSubmit(event) {
     event.preventDefault();
-    this.setState(prevState => ({isSearching: !prevState.isSearching}));
+
+    if (event.target.elements.searchfield.value.length > 0) {
+      this.setState(prevState => ({isSearching: !prevState.isSearching}));
+    }
+
     const { api_url, query } = this.state;
     const regex = /\s/g;
     const parsedQuery = query.replace(regex, "+");
