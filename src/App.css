@@ -4,6 +4,9 @@
 @import './comps/card/na.css';
 @import './comps/loader/Loader.css';
 
+:root {
+  --main-color: rgba(159, 58, 58, 1);
+}
 
 *, *::after, *::before {
   box-sizing: border-box;
@@ -23,8 +26,7 @@
 
 .App-header h1 {
   margin: 0;
-  /* color: rgba(159, 58, 58, 1); */
-  border-bottom: 2px solid rgba(159, 58, 58, 1);
+  border-bottom: 2px solid var(--main-color);
 }
 
 .Default {
@@ -35,7 +37,7 @@
 .temptext {
   margin-top: 1em;
   transition: all 300ms ease-in-out;
-  color: rgba(159, 58, 58, 1);
+  color: var(--main-color);
 }
 
 .top {
@@ -43,11 +45,12 @@
 }
 
 .noresults {
-  color: rgba(159, 58, 58, 1);
+  color: var(--main-color);
   text-align: center;
 }
 
 .Searching {
   text-align: center;
   font-size: 1.5em;
+  color: var(--main-color);
 }

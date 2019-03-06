@@ -49,7 +49,7 @@ const Card = ({ data }) => {
                     }
                       {/* { item.searchInfo ? item.searchInfo.textSnippet : `Sin Descripción` } */}
                     <div name="button" className="btn">
-                      <a className="link" href={item.volumeInfo.previewLink} rel="noopener noreferrer" target="_blank">+</a>
+                      <a className="link" href={item.volumeInfo.previewLink} rel="noopener noreferrer" target="_blank">more</a>
                     </div>
 
                   </div>

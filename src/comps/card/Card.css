@@ -1,3 +1,5 @@
+
+
 .CardsList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -11,8 +13,8 @@
   display: flex;
   align-items: center;
   margin-top: 30px;
-  border: 2px solid rgba(159, 58, 58, 1);
-  border-left: 1em solid rgba(159, 58, 58, 1);
+  border: 2px solid var(--main-color);
+  border-left: 1em solid var(--main-color);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   transition: all 300ms ease;
@@ -27,7 +29,8 @@
 
 .Card:hover .book-img{
   /* background-color: rgba(159, 58, 58, .1); */
-  /* transform: perspective(0px) rotateY(0deg); */
+  transform: translate(8px, -8px) rotate(-3deg);
+  box-shadow: 2px 2px 5px 0 rgba(159, 58, 58, .7);
 }
 
 
@@ -55,7 +58,7 @@
   margin: 10px;
   padding: 10px;
   text-align: center;
-  color: rgba(159, 58, 58, 1);
+  color: var(--main-color);
 }
 
 .book-title::after {
@@ -87,9 +90,7 @@
   transform-origin: center center;
 }
 
-.book-img:hover {
-  transform: translate(8px, -8px) rotate(-3deg);
-}
+
 
 .book-more {
   display: flex;
@@ -126,7 +127,7 @@
   display: inline-block;
   padding: 5px 10px;
   font-size: .9em;
-  background-color: rgba(159, 58, 58, 1);
+  background-color: var(--main-color);
   color: #fff;
   text-align: center;
   margin: 10px;
@@ -135,16 +136,16 @@
 .btn {
   display: inline-block;
   font-weight: 600;
-  border: 2px solid rgba(159, 58, 58, 1);
+  border: 2px solid var(--main-color);
   color: rgba(159, 58, 58,1);
-  transition: all 200ms ease;
+  transition: all 300ms ease;
 }
 
 .btn:hover {
   cursor: pointer;
-  background-color: rgba(159, 58, 58, 1);
+  background-color: var(--main-color);
   color:#fff;
-  transform: rotate(180deg);
+  /* transform: rotate(360deg); */
   border-radius: 0px;
 }
 

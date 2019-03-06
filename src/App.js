@@ -79,9 +79,9 @@ class App extends Component {
           : null
         }
 
-        <Loader isSearching={this.state.isSearching}/>
+        <Loader isSearching={this.state.isSearching} query={this.state.query}/>
 
-        { this.state.isSearching ? <h1 className="Searching">Searching...</h1> : null }
+        { this.state.isSearching && this.state.query ? <h1 className="Searching">Searching...</h1> : null }
 
         {/* render cards based on input results */}
         <div className="CardsList">
